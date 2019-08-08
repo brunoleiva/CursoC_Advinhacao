@@ -1,1 +1,0 @@
-printf("Bem vindo ao nosso jogo de advinhação");
