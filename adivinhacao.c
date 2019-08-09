@@ -9,9 +9,12 @@ int main()
 	int	numero = 42;	
 	//printf("O numero secreto: %d", numero);
 
-	int chute;
+	int chute;,
+
 	printf("Qual o seu chute? ");
 	scanf("%d", &chute);
 	printf("Seu chute foi %d", chute);
+
+	printf("VOCE ACERTOU!! BOA!!");
 
 }
