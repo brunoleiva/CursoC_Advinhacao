@@ -14,11 +14,10 @@ void main()
 	int numeroSecreto = rand() % 100;
 	int chute;
 	int tentativas = 8;
-	
 	printf("*ADIVINHE O NUMERO DE 1 A 100*\n");
 	//printf("%d\n", chute);
 	while(numeroSecreto != chute && tentativas != 0 ){
-
+		
 		printf("Voce tem %d tentativas!\n", tentativas);
 		printf("Qual o seu chute? \n");
 		scanf("%d", &chute);
