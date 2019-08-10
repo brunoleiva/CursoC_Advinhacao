@@ -10,14 +10,28 @@ void main()
 	printf("*Bem-vindo ao nosso jogo!!*\n");
 	printf("***************************\n");
 
+	int dificuldade;
+	int tentativas;
+	printf("(1) Facil \n(2) Medio\n(3) Dificil");
+	scanf("%d", &dificuldade);
+
+	if(dificuldade ==1){
+		tentativas = 12;
+	}
+	else if(dificuldade ==2){
+		tentativas = 8;
+	}
+	else if(dificuldade ==3){
+		tentativas = 5;
+	}
+
 	srand(time(NULL));
 	int numeroSecreto = rand() % 100;
 	int chute;
-	int tentativas = 8;
 	printf("*ADIVINHE O NUMERO DE 1 A 100*\n");
 	//printf("%d\n", chute);
 	while(numeroSecreto != chute && tentativas != 0 ){
-		
+
 		printf("Voce tem %d tentativas!\n", tentativas);
 		printf("Qual o seu chute? \n");
 		scanf("%d", &chute);
