@@ -11,8 +11,8 @@ void main()
 	printf("***************************\n");
 
 	int dificuldade;
-	int tentativas;
-	printf("(1) Facil \n(2) Medio\n(3) Dificil");
+	int tentativas = 0;
+	printf("(1) Facil \n(2) Medio\n(3) Dificil\n");
 	scanf("%d", &dificuldade);
 
 	if(dificuldade ==1){
@@ -23,26 +23,28 @@ void main()
 	}
 	else if(dificuldade ==3){
 		tentativas = 5;
+	}else if (tentativas == 0){
+		printf("*ESCOLHA UMA DIFICULDADE VALIDA >.<*\n");
 	}
 
 	srand(time(NULL));
 	int numeroSecreto = rand() % 100;
 	int chute;
-	printf("*ADIVINHE O NUMERO DE 1 A 100*\n");
+	
 	//printf("%d\n", chute);
 	while(numeroSecreto != chute && tentativas != 0 ){
-
+		printf("*ADIVINHE O NUMERO DE 1 A 100*\n");
 		printf("Voce tem %d tentativas!\n", tentativas);
 		printf("Qual o seu chute? \n");
 		scanf("%d", &chute);
 
 		if(chute < numeroSecreto){
-			printf("Um pouco MAIOR :o\n\n");
+			printf("\n** Um pouco MAIOR :o **\n\n");
 
 		}
 		else if (chute > numeroSecreto)
 		{
-			printf("Um pouco MENOS :o\n\n");
+			printf("\n** Um pouco MENOR :o **\n\n");
 		}
 
 		tentativas --;
